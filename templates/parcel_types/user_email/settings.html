@@ -14,17 +14,20 @@
 	name: 'settings[parcelTypeSettings][userEmail][events]',
 	allValue: '',
 	options: [{
+		label: "userSession.onLogin",
+		value: "userSession.login"
+	},{
+		label: "userSession.onLogout",
+		value: "userSession.logout"
+	},{
+		label: "users.onBeforeSaveUser",
+		value: "users.beforeSaveUser"
+	},{
 		label: "users.onSaveUser",
 		value: "users.saveUser"
 	},{
-		label: "users.onLogin",
-		value: "users.login"
-	},{
-		label: "users.onLogout",
-		value: "users.logout"
-	},{
 		label: "users.onActivateUser",
-		value: "users.activateUsers"
+		value: "users.activateUser"
 	},{
 		label: "users.onDeleteUser",
 		value: "users.deleteUser"
@@ -45,7 +48,7 @@
 		value: "users.suspendUser"
 	},{
 		label: "users.onVerifyUser",
-		value: "users.unlockUser"
+		value: "users.verifyUser"
 	}],
 	values: settings.events is empty ? [''] : settings.events
 }) }}
@@ -57,7 +60,7 @@
 	name: 'settings[parcelTypeSettings][userEmail][triggers]',
 	enabled: true,
 	options: [{
-		label: "New Uers"|t,
+		label: "New Uslers"|t,
 		value: "new"
 	},{
 		label: "Existing Users"|t,
